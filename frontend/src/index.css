@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-blue: #0056b3;
+  --color-primary-blue-dark: #004494;
+  --color-primary-blue-light: #3378c2;
+  --color-sporty-blue: #0070f3;
+  
+  --animate-slide-in-right: slide-in-right 0.3s ease-out forwards;
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+:root {
+  --primary-blue: #0056b3;
+  --font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.preview-container {
+  color: var(--primary-color);
+  font-size: var(--font-size);
+}

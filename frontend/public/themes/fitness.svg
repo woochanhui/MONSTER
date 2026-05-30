@@ -1,0 +1,30 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#09090B"/>
+  
+  <!-- Grid System -->
+  <g opacity="0.1">
+    <rect x="40" y="40" width="220" height="240" rx="20" stroke="#F43F5E" stroke-width="2"/>
+    <rect x="280" y="40" width="480" height="240" rx="20" stroke="#F43F5E" stroke-width="2"/>
+    <rect x="40" y="300" width="480" height="260" rx="20" stroke="#F43F5E" stroke-width="2"/>
+    <rect x="540" y="300" width="220" height="260" rx="20" stroke="#F43F5E" stroke-width="2"/>
+  </g>
+  
+  <!-- Heart Rate Mockup -->
+  <path d="M300 200H350L370 120L400 260L430 180L450 200H500" stroke="#F43F5E" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+  
+  <!-- Stats Circle -->
+  <circle cx="150" cy="160" r="60" stroke="#27272A" stroke-width="12"/>
+  <path d="M150 100C183.137 100 210 126.863 210 160C210 193.137 183.137 220 150 220" stroke="#F43F5E" stroke-width="12" stroke-linecap="round"/>
+  <text x="150" y="168" text-anchor="middle" fill="white" font-family="sans-serif" font-weight="900" font-size="24">72%</text>
+  
+  <!-- Big Title -->
+  <text x="280" y="450" fill="white" font-family="system-ui" font-weight="900" font-size="80" italic="true">LEVEL UP</text>
+  <rect x="280" y="470" width="200" height="12" fill="#F43F5E"/>
+  
+  <defs>
+    <filter id="glow" x="250" y="100" width="300" height="200">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+</svg>
