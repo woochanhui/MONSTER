@@ -1,0 +1,48 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.05"/>
+      </feComponentTransfer>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="glass" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="gooey"/>
+      <feComposite in="SourceGraphic" in2="gooey" operator="atop"/>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="white" filter="url(#grain)" opacity="0.5"/>
+  
+  <!-- Sidebar Mockup -->
+  <rect x="40" y="40" width="180" height="520" rx="16" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.1"/>
+  <circle cx="70" cy="70" r="8" fill="#3B82F6"/>
+  <rect x="60" y="110" width="140" height="12" rx="4" fill="white" fill-opacity="0.1"/>
+  <rect x="60" y="140" width="100" height="12" rx="4" fill="white" fill-opacity="0.05"/>
+  <rect x="60" y="170" width="120" height="12" rx="4" fill="white" fill-opacity="0.05"/>
+  
+  <!-- Main Chart Card -->
+  <rect x="240" y="40" width="520" height="300" rx="24" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.1"/>
+  <path d="M280 280Q350 150 420 220T560 100T700 180" stroke="#3B82F6" stroke-width="4" stroke-linecap="round"/>
+  <g opacity="0.3">
+    <line x1="280" y1="280" x2="700" y2="280" stroke="white" stroke-width="1"/>
+    <line x1="280" y1="230" x2="700" y2="230" stroke="white" stroke-width="1" stroke-dasharray="4 4"/>
+    <line x1="280" y1="180" x2="700" y2="180" stroke="white" stroke-width="1" stroke-dasharray="4 4"/>
+  </g>
+  
+  <!-- Glass Card Overlay -->
+  <g filter="url(#glass)">
+    <rect x="500" y="180" width="220" height="140" rx="20" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.2"/>
+  </g>
+  <text x="530" y="220" fill="white" font-family="sans-serif" font-weight="700" font-size="24">84%</text>
+  <text x="530" y="245" fill="white" fill-opacity="0.5" font-family="sans-serif" font-size="12">CONVERSION RATE</text>
+  <rect x="530" y="270" width="160" height="4" rx="2" fill="white" fill-opacity="0.1"/>
+  <rect x="530" y="270" width="134" height="4" rx="2" fill="#3B82F6"/>
+</svg>
